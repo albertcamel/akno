@@ -1,0 +1,20 @@
+{
+  "name": "muntz/akno",
+  "description": "N/A",
+  "require": {
+    "php": "~7.1.0",
+    "sm/magento2-sawyer-theme": "2.4.*",
+    "muntz/magento2-simple-wishlist": "~1.0.0",
+    "muntz/magento2-teaser": "~1.0.0"
+  },
+  "type": "magento2-theme",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ]
+  }
+}

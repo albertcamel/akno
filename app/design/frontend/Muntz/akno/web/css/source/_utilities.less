@@ -1,0 +1,170 @@
+/* Theme setup ================================================================= */
+
+@theme-name: 'akno';
+
+/* Fonts, Colors ================================================================= */
+
+//Colors
+@primary_color: #0000;
+@secondary_color: #fff;
+
+@primary-font-color: #000;
+@secondary-font-color: #000;
+
+@secondary-font-color: #666;
+@border_color: #fff;
+@button-bg-color: #000000;
+
+// Font familys
+@header_footer_font: 'Arial';
+@primary_font_family: 'Arial';
+@secondary_font_family: 'Arial';
+
+//Font sizes
+@h1_font_size: 30px;
+@h2_font_size: 20px;
+@p_font_size: 14px;
+@product_font_size: 50px;
+
+/* Functions for product page ================================================================= */
+
+.product_title(@primary_font_family,@product_font_size,@primary-font-color) {
+
+  .products {
+    .product {
+      .product-item-name {
+        a .product-item-link {
+          font-family: @primary_font_family;
+          font-size: @product_font_size;
+          color: @primary-font-color;
+        }
+      }
+    }
+  }
+
+}
+
+/* Fonts ================================================================= */
+.h1_font(@primary-font,@primary-font-color,@h1_font_size) {
+  font-family: @primary-font;
+  font-size: @h1_font_size;
+  color: @primary-font-color;
+
+}
+
+.h2_font(@primary-font,@primary-font-color,@h2_font_size) {
+  font-family: @primary-font;
+  font-size: @h2_font_size;
+  color: @primary-font-color;
+
+}
+
+.p_font(@primary-font,@primary-font-color,@p_font_size) {
+  font-family: @primary-font;
+  font-size: @p_font_size;
+  color: @primary-font-color;
+
+}
+
+.general_button() {
+
+}
+
+/* Button Styles ================================================================= */
+
+/* Media-Queries ================================================================= */
+.screen-xxs(@rules) {
+  @media (max-width: @screen-xxs-max) { @rules();
+  }
+}
+
+.screen-xs(@rules) {
+  @media (max-width: @screen-xs-max) { @rules();
+  }
+}
+
+.screen-sm(@rules) {
+  @media (max-width: @screen-sm-max) { @rules();
+  }
+}
+
+.screen-md(@rules) {
+  @media (max-width: @screen-md-max) { @rules();
+  }
+}
+
+.screen-lg(@rules) {
+  @media (max-width: @screen-lg-max) { @rules();
+  }
+}
+
+.screen-xlg(@rules) {
+  @media (max-width: @screen-lg-max) { @rules();
+  }
+}
+
+.screen-lg-min(@rules) {
+  @media (min-width: @screen-lg-min) { @rules();
+  }
+}
+
+.screen-xlg-min(@rules) {
+  @media (min-width: @screen-xlg-min) { @rules();
+  }
+}
+
+/* Vertical-Gradient */
+.gradient( @start, @end ) {
+  background: @start;
+  filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='@start', endColorstr='@end',GradientType=0 )";
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @start), color-stop(100%, @end));
+
+  background: -webkit-linear-gradient(left, @start 0%, @end 100%);
+  background: -moz-linear-gradient(left, @start 0%, @end 100%);
+  background: -ms-linear-gradient(left, @start 0%, @end 100%);
+  background: -o-linear-gradient(left, @start 0%, @end 100%);
+  background: linear-gradient(left, @start 0%, @end 100%);
+}
+
+/* Horizontal-Gradient */
+.horizontal-gradient (@startColor: white, @endColor: white) {
+  background-color: @startColor;
+  background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+  background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+  background-image: -moz-linear-gradient(left, @startColor, @endColor);
+  background-image: -ms-linear-gradient(left, @startColor, @endColor);
+  background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+/* Opacity */
+.opacity( @opacity: 0.5 ) {
+  @ieopacity: @opacity * 100;
+  filter: ~"alpha(opacity = @{ieopacity} )";
+  -khtml-opacity: @opacity;
+  -moz-opacity: @opacity;
+  opacity: @opacity;
+}
+
+/* Transition */
+.transition (@transition) {
+  transition: @transition;
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -o-transition: @transition;
+}
+
+/* Transform */
+.transform(@string) {
+  -webkit-transform: @string;
+  -moz-transform: @string;
+  -ms-transform: @string;
+  -o-transform: @string;
+}
+
+/* Translate */
+.translate (@x, @y:0) {
+  -webkit-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+}
